@@ -1,0 +1,66 @@
+body {
+    text-align: center;
+  }
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.marquee {
+  overflow: hidden;
+  font-family: "Pridi", sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: #c9c9c9;
+  margin: 0 0 6rem 0;
+}
+
+.marquee__inner {
+  display: flex;
+}
+
+.marquee__line {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 10px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+  
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+  #board {
+    background-color: lightcyan;
+    border-bottom: 20px solid rgb(98, 0, 0);
+    border-radius: 10px;
+  }
+
+  button{
+    width:  160px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: lightgreen;
+    color: darkgreen;
+    border: none;
+    border-radius: 8px;
+}
+button:hover{
+    background-color: darkgreen;
+    color: rgb(255, 255, 255);
+}
